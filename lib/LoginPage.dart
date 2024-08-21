@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
             //   "assets/fdaf1026bbf9608a68a0fdc8118affee.jpg",
             //   fit: BoxFit.cover,
             // ),
-            Image.network("https://images.pexels.com/photos/2528116/pexels-photo-2528116.jpeg?auto=compress&cs=tinysrgb&w=600",
+            Image.network("https://images.pexels.com/photos/7974/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=600",
             fit: BoxFit.cover,
             )
           ),
@@ -113,7 +113,7 @@ class LoginPage extends StatelessWidget {
             children: [
               Text(
                 "Not Registered ? ",
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
               GestureDetector(
                 onTap: ontap,
