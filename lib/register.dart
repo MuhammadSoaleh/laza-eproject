@@ -55,7 +55,7 @@ class RegisterPage extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.network(
-              "https://cdn.pixabay.com/photo/2016/11/07/10/14/laptop-1805315_640.jpg",
+              "https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&w=600",
               fit: BoxFit.cover,
             ),
           ),
