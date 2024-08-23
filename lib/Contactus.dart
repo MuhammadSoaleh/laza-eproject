@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:laza/dashboard.dart';
 import 'package:laza/firestore.dart';
 import 'package:laza/my_textfeild.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
@@ -83,6 +84,18 @@ class _ContactusState extends State<Contactus> {
             ),
             backgroundColor: Color(0xff9775FA),
             foregroundColor: Colors.black,
+            actions: [
+              InkWell(
+                borderRadius: const BorderRadius.all(Radius.circular(50)),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard()));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0,0,2,0),
+                  child: Icon(Icons.home),
+                ),
+              ),
+            ],
           ),
           body: Stack(
             children: [
@@ -121,8 +134,7 @@ class _ContactusState extends State<Contactus> {
                       SizedBox(height: 25),
                       // Message text field
                       Container(
-                        height: 150,
-                        width: 450, // Adjust width as needed
+                        width: MediaQuery.of(context).size.width * 0.9, // Adjust width to be responsive
                         child: TextField(
                           controller: messageController,
                           obscureText: false,
@@ -168,35 +180,35 @@ class _ContactusState extends State<Contactus> {
               ),
             ],
           ),
-          bottomNavigationBar: SizedBox(
-            height: 56,
-            child: SlidingClippedNavBar(
-              backgroundColor: Colors.white, // Adjust as needed
-              onButtonPressed: _onNavigationTap,
-              iconSize: 25,
-              activeColor: Color(0xff9775FA),
-              inactiveColor: const Color(0xff8F959E),
-              selectedIndex: _selectedIndex,
-              barItems: [
-                BarItem(
-                  icon: Icons.home,
-                  title: 'Home',
-                ),
-                BarItem(
-                  icon: Icons.favorite,
-                  title: 'Wishlist',
-                ),
-                BarItem(
-                  icon: Icons.shopping_bag,
-                  title: 'Cart',
-                ),
-                BarItem(
-                  icon: Icons.wallet,
-                  title: 'My Cards',
-                ),
-              ],
-            ),
-          ),
+          // bottomNavigationBar: SizedBox(
+          //   height: 56,
+          //   child: SlidingClippedNavBar(
+          //     backgroundColor: Colors.white, // Adjust as needed
+          //     onButtonPressed: _onNavigationTap,
+          //     iconSize: 25,
+          //     activeColor: Color(0xff9775FA),
+          //     inactiveColor: const Color(0xff8F959E),
+          //     selectedIndex: _selectedIndex,
+          //     barItems: [
+          //       BarItem(
+          //         icon: Icons.home,
+          //         title: 'Home',
+          //       ),
+          //       BarItem(
+          //         icon: Icons.favorite,
+          //         title: 'Wishlist',
+          //       ),
+          //       BarItem(
+          //         icon: Icons.shopping_bag,
+          //         title: 'Cart',
+          //       ),
+          //       BarItem(
+          //         icon: Icons.wallet,
+          //         title: 'My Cards',
+          //       ),
+          //     ],
+          //   ),
+          // ),
         ),
       ),
     );

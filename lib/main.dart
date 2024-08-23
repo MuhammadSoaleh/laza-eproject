@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             themeMode: themeNotifier.themeMode,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
-            home: AuthGate(),
+            home: Contactus(),
             routes: {
               '/authgate': (context) => AuthGate(),
               '/dashboard': (context) => Dashboard(),
