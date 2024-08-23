@@ -1,7 +1,7 @@
 
 
 import 'package:laza/LoginPage.dart';
-import 'package:laza/index.dart';
+import 'package:laza/Contactus.dart';
 import 'package:laza/login_or_register.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';

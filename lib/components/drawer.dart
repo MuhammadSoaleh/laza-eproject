@@ -6,10 +6,13 @@ import 'package:laza/theme.dart';
 import 'package:provider/provider.dart';
 import 'colors.dart';
 import 'laza_icons.dart';
-
+import 'package:laza/authservice.dart';
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
-
+void logout() {
+    final _auth = AuthServices();
+    _auth.signOut();
+  }
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -176,25 +179,7 @@ class DrawerWidget extends StatelessWidget {
               children: [
                 ListTile(
                   leading: const Icon(LazaIcons.logout, color: Colors.red),
-                  onTap: () async {
-                    await showOkCancelAlertDialog(
-                      context: context,
-                      title: 'Confirm Logout',
-                      message: 'Are you sure you want to logout?',
-                      isDestructiveAction: true,
-                      okLabel: 'Logout',
-                    ).then((result) {
-                      if (result == OkCancelResult.ok) {
-                        Navigator.pushAndRemoveUntil(
-                            context,
-                            MaterialPageRoute(builder: (context) => const IntroductionScreen()),
-                            (Route<dynamic> route) => false);
-                      }
-                    });
-                  },
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  title: const Text('Logout'),
-                  horizontalTitleGap: 10.0,
+                  onTap: logout,
                 ),
                 const SizedBox(height: 30.0),
               ],

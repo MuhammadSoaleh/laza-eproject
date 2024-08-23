@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:laza/Contactus.dart';
 import 'package:laza/authgate.dart';
 import 'package:laza/dashboard.dart';
 import 'package:laza/firebase_options.dart';
@@ -30,7 +31,13 @@ class MyApp extends StatelessWidget {
             themeMode: themeNotifier.themeMode,
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
-            home: AuthGate(),
+            home: Contactus(),
+            routes: {
+              '/authgate': (context) => AuthGate(),
+              '/dashboard': (context) => Dashboard(),
+              '/contactus': (context) => Contactus(),
+
+            },
           );
         },
       ),

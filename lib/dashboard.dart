@@ -60,9 +60,11 @@ class _DashboardState extends State<Dashboard> {
             child: const DrawerWidget(),
           ),
           body: PageView(
+            
             physics: const NeverScrollableScrollPhysics(),
             controller: pageController,
             children: const [
+              
               HomeScreen(),
               WishlistScreen(),
               CartScreen(),
@@ -102,13 +104,17 @@ class _DashboardState extends State<Dashboard> {
                     BarItem(
                       icon: LazaIcons.wallet,
                       title: 'My Cards',
+                      
                     ),
+                    
                   ],
+                  
                 ),
               ),
               Container(
                 padding: EdgeInsets.only(bottom: context.bottomViewPadding),
                 color: bottomBarBgColor,
+                
               )
             ],
           ),
