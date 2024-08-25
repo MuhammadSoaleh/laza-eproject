@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
   // Brand('Puma', LazaIcons.puma_logo),
   // Brand('Fila', LazaIcons.fila_logo),
   Brand('Dell', Icons.airplay_rounded),    // Custom Dell logo
-  Brand('HP', Icons.apple_outlined),        // Custom HP logo
+  Brand('Mac Book', Icons.apple_outlined),        // Custom HP logo
   Brand('Lenovo', Icons.laptop_windows_outlined),// Custom Lenovo logo
 ];
 
