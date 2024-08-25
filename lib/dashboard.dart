@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:laza/Contactus.dart';
 import 'package:laza/cart_screen.dart';
 import 'package:laza/components/colors.dart';
 import 'package:laza/components/drawer.dart';
@@ -63,12 +64,12 @@ class _DashboardState extends State<Dashboard> {
             
             physics: const NeverScrollableScrollPhysics(),
             controller: pageController,
-            children: const [
+            children:  [
               
               HomeScreen(),
               WishlistScreen(),
               CartScreen(),
-              MyCardsScreen(),
+              Contactus(),
             ],
           ),
           bottomNavigationBar: Column(
@@ -102,8 +103,8 @@ class _DashboardState extends State<Dashboard> {
                       title: 'Cart',
                     ),
                     BarItem(
-                      icon: LazaIcons.wallet,
-                      title: 'My Cards',
+                      icon: LazaIcons.voice,
+                      title: 'Contact Us',
                       
                     ),
                     

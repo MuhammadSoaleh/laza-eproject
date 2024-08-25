@@ -84,18 +84,7 @@ class _ContactusState extends State<Contactus> {
             ),
             backgroundColor: Color(0xff9775FA),
             foregroundColor: Colors.black,
-            actions: [
-              InkWell(
-                borderRadius: const BorderRadius.all(Radius.circular(50)),
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard()));
-                },
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0,0,2,0),
-                  child: Icon(Icons.home),
-                ),
-              ),
-            ],
+            
           ),
           body: Stack(
             children: [

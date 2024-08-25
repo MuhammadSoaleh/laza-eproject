@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:laza/Contactus.dart';
+import 'package:laza/aboutus.dart';
 import 'package:laza/authgate.dart';
 import 'package:laza/cart_screen.dart';
 import 'package:laza/dashboard.dart';
