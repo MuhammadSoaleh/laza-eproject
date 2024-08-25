@@ -15,7 +15,7 @@ import 'package:laza/home_screen.dart';
 import 'package:laza/my_cards_screen.dart';
 import 'package:laza/wishlist_screen.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 var dashboardScaffoldKey = GlobalKey<ScaffoldState>();
 
 class Dashboard extends StatefulWidget {
@@ -103,7 +103,7 @@ class _DashboardState extends State<Dashboard> {
                       title: 'Cart',
                     ),
                     BarItem(
-                      icon: LazaIcons.voice,
+                      icon: Icons.phone,
                       title: 'Contact Us',
                       
                     ),

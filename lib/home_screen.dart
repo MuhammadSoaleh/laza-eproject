@@ -15,11 +15,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const brands = [
-      Brand('Adidas', LazaIcons.adidas_logo),
-      Brand('Nike', LazaIcons.nike_logo),
-      Brand('Puma', LazaIcons.puma_logo),
-      Brand('Fila', LazaIcons.fila_logo),
-    ];
+  // Brand('Adidas', Icons.some_icon),
+  //  // Replace with an appropriate icon
+  // Brand('Nike', LazaIcons.nike_logo),
+  // Brand('Puma', LazaIcons.puma_logo),
+  // Brand('Fila', LazaIcons.fila_logo),
+  Brand('Dell', Icons.airplay_rounded),    // Custom Dell logo
+  Brand('HP', Icons.apple_outlined),        // Custom HP logo
+  Brand('Lenovo', Icons.laptop_windows_outlined),// Custom Lenovo logo
+];
+
 
     const products = [
       Product(
