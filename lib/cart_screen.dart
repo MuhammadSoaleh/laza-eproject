@@ -39,7 +39,7 @@ class CartScreen extends StatelessWidget {
                         color: context.theme.scaffoldBackgroundColor,
                         borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                         image:
-                            const DecorationImage(image: AssetImage('assets/images/img3.png'), fit: BoxFit.fitWidth)),
+                            const DecorationImage(image: AssetImage('assets/images/notebook-xps-16-9640-nt-silver-compare-800x550-front.jpg'), fit: BoxFit.fitWidth)),
                   ),
                   const SizedBox(width: 10.0),
                   Flexible(
@@ -146,7 +146,7 @@ class CartScreen extends StatelessWidget {
                         color: context.theme.scaffoldBackgroundColor,
                         borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                         image:
-                            const DecorationImage(image: AssetImage('assets/images/img3.png'), fit: BoxFit.fitWidth)),
+                            const DecorationImage(image: AssetImage('assets/images/notebook-xps-16-9640-nt-silver-compare-800x550-front.jpg'), fit: BoxFit.fitWidth)),
                   ),
                   const SizedBox(width: 10.0),
                   Flexible(
