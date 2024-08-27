@@ -110,8 +110,8 @@ class _ContactusState extends State<Contactus> {
                       SizedBox(height: 10),
                       Image.asset(
                         "assets/images/Logo.png",
-                        height: 300,
-                        width: 300,
+                        height: 100,
+                        width: 100,
                       ),
                       SizedBox(height: 25),
                       // Email text field
