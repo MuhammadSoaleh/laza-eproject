@@ -38,24 +38,49 @@ class _aboutusState extends State<aboutus> {
                 ),
               ),),
       ),
-      body: Center(
+      body:Stack(
+            children: [
+              // Background image
+              Positioned.fill(
+                child: Image.network(
+                  "https://images.pexels.com/photos/26834970/pexels-photo-26834970/free-photo-of-a-group-of-people-with-a-laptop.jpeg?auto=compress&cs=tinysrgb&w=600",
+                  fit: BoxFit.cover,
+                ),
+              ),
+              // Semi-transparent overlay
+              Positioned.fill(
+                child: Container(
+                  color: Colors.black.withOpacity(0.5),
+                ),
+              ),
+            
+               Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Who we are:',
+              'Who we are',
+              
+               style:  TextStyle(height: 0,fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                     color: Colors.white, // Corrected the color property
+),
             ),
-            Text(
-              'Welcome to our laptop e-commerce store, where innovation meets technology. We specialize in providing top-notch solutions using Dart and Flutter to bring your digital ideas to life. Our team consists of passionate developers dedicated to creating a seamless shopping experience for our custom'
+            Center(
+              child: Text(
+                'Welcome to our laptop e-commerce store, where innovation meets technology. Welcome to Laza, your trusted destination for the latest and greatest in laptops. At Laza, we are passionate about technology and committed to providing our customers with a seamless shopping experience. Whether you\'re a student, professional, or tech enthusiast, we offer a wide range of laptops from leading brands to meet your specific needs.\n\n'
+                'Our mission is to empower our customers with cutting-edge technology by offering high-quality products at competitive prices. We pride ourselves on our exceptional customer service, ensuring that every purchase is supported by knowledgeable staff and a hassle-free shopping process. From browsing to delivery, we aim to make your experience with Laza as enjoyable and convenient as possible.\n\n'
+                'At Laza, we don\'t just sell laptops; we provide solutions. We understand that buying a laptop is an important decision, which is why we are here to guide you every step of the way. Thank you for choosing Laza, where innovation meets reliability.',
+              
+              style: TextStyle(
+                color: Colors.white,
+              ),),
             ),
+
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
-    );
+      
+  ])  );
   }
 }

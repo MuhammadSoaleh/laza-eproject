@@ -19,7 +19,7 @@ final void Function() onTap;
             width: double.maxFinite,
             child: Center(
               child: Text(label, style: const TextStyle(
-                color: Colors.white, fontSize: 17,fontWeight: FontWeight.w500
+                color: Colors.white, fontSize: 10,fontWeight: FontWeight.w300
               ),
               textAlign: TextAlign.center,
               ),

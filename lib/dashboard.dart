@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:laza/Contactus.dart';
+import 'package:laza/aboutus.dart';
 import 'package:laza/cart_screen.dart';
 import 'package:laza/components/colors.dart';
 import 'package:laza/components/drawer.dart';
@@ -70,6 +71,7 @@ class _DashboardState extends State<Dashboard> {
               WishlistScreen(),
               CartScreen(),
               Contactus(),
+              // aboutus(),
             ],
           ),
           bottomNavigationBar: Column(
@@ -85,7 +87,7 @@ class _DashboardState extends State<Dashboard> {
                     });
                     pageController.jumpToPage(selectedIndex);
                   },
-                  iconSize: 25,
+                  iconSize: 20,
                   activeColor: ColorConstant.primary,
                   inactiveColor: const Color(0xff8F959E),
                   selectedIndex: selectedIndex,
@@ -107,6 +109,11 @@ class _DashboardState extends State<Dashboard> {
                       title: 'Contact Us',
                       
                     ),
+                    // BarItem(
+                    //   icon: Icons.people_outline,
+                    //   title: 'About Us',
+                      
+                    // ),
                     
                   ],
                   

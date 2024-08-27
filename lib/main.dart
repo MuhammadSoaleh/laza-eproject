@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
               '/wishlist': (context) => WishlistScreen(),
               '/cart': (context) => CartScreen(),
               '/my_cards': (context) => MyCardsScreen(),
+              '/aboutus': (context) => aboutus(),
             },
           );
         },

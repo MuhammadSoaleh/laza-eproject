@@ -167,10 +167,12 @@ void logout() {
                   horizontalTitleGap: 10.0,
                 ),
                 ListTile(
-                  leading: const Icon(LazaIcons.settings),
-                  onTap: () {},
+                  leading: const Icon(Icons.people_outline),
+                  onTap: () {
+Navigator.pushNamed(context, '/aboutus');
+                  },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  title: const Text('Settings'),
+                  title: const Text('About Us'),
                   horizontalTitleGap: 10.0,
                 ),
               ],
@@ -179,6 +181,7 @@ void logout() {
               children: [
                 ListTile(
                   leading: const Icon(LazaIcons.logout, color: Colors.red),
+                  title: const Text('LOGOUT'),
                   onTap: logout,
                 ),
                 const SizedBox(height: 30.0),

@@ -41,6 +41,9 @@ class _ContactusState extends State<Contactus> {
       case 3:
         Navigator.pushNamed(context, '/my_cards');
         break;
+        case 4:
+        Navigator.pushNamed(context, '/aboutus');
+        break;
     }
   }
 
