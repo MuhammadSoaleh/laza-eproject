@@ -10,13 +10,14 @@ import 'package:laza/aboutus.dart';
 import 'package:laza/cart_screen.dart';
 import 'package:laza/components/colors.dart';
 import 'package:laza/components/drawer.dart';
-import 'package:laza/components/laza_icons.dart';
 import 'package:laza/extensions/context_extension.dart';
 import 'package:laza/home_screen.dart';
 import 'package:laza/my_cards_screen.dart';
 import 'package:laza/wishlist_screen.dart';
 import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 var dashboardScaffoldKey = GlobalKey<ScaffoldState>();
 
 class Dashboard extends StatefulWidget {
@@ -27,9 +28,12 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
-  final pageController = PageController();
+  final PageController pageController = PageController();
   int selectedIndex = 0;
   bool pop = false;
+  GlobalKey<CurvedNavigationBarState> _bottomNavigationKey = GlobalKey();
+  int _page = 0;
+
   @override
   Widget build(BuildContext context) {
     final bottomBarBgColor = context.theme.bottomNavigationBarTheme.backgroundColor;
@@ -45,7 +49,7 @@ class _DashboardState extends State<Dashboard> {
           if (pop) {
             return true;
           }
-          Fluttertoast.showToast(msg: 'Press again to exist the app');
+          Fluttertoast.showToast(msg: 'Press again to exit the app');
           pop = true;
           Timer(const Duration(seconds: 2), () {
             pop = false;
@@ -62,69 +66,40 @@ class _DashboardState extends State<Dashboard> {
             child: const DrawerWidget(),
           ),
           body: PageView(
-            
             physics: const NeverScrollableScrollPhysics(),
             controller: pageController,
-            children:  [
-              
+            onPageChanged: (index) {
+              setState(() {
+                selectedIndex = index;
+                _page = index; // Syncing with _page
+              });
+            },
+            children: [
               HomeScreen(),
               WishlistScreen(),
               CartScreen(),
               Contactus(),
-              // aboutus(),
+              aboutus(),
             ],
           ),
-          bottomNavigationBar: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(
-                height: 56,
-                child: SlidingClippedNavBar(
-                  backgroundColor: bottomBarBgColor ?? Colors.white,
-                  onButtonPressed: (index) {
-                    setState(() {
-                      selectedIndex = index;
-                    });
-                    pageController.jumpToPage(selectedIndex);
-                  },
-                  iconSize: 20,
-                  activeColor: ColorConstant.primary,
-                  inactiveColor: const Color(0xff8F959E),
-                  selectedIndex: selectedIndex,
-                  barItems: [
-                    BarItem(
-                      icon: LazaIcons.home,
-                      title: 'Home',
-                    ),
-                    BarItem(
-                      icon: LazaIcons.heart,
-                      title: 'Wishlist',
-                    ),
-                    BarItem(
-                      icon: LazaIcons.bag,
-                      title: 'Cart',
-                    ),
-                    BarItem(
-                      icon: Icons.phone,
-                      title: 'Contact Us',
-                      
-                    ),
-                    // BarItem(
-                    //   icon: Icons.people_outline,
-                    //   title: 'About Us',
-                      
-                    // ),
-                    
-                  ],
-                  
-                ),
-              ),
-              Container(
-                padding: EdgeInsets.only(bottom: context.bottomViewPadding),
-                color: bottomBarBgColor,
-                
-              )
+          bottomNavigationBar: CurvedNavigationBar(
+            key: _bottomNavigationKey,
+            items: const <Widget>[
+              Icon(Icons.home, size: 30),
+              Icon(Icons.favorite, size: 30),
+              Icon(Icons.shopping_cart, size: 30),
+              Icon(Icons.phone, size: 30),
+              Icon(Icons.people_alt, size: 30),
             ],
+            color: bottomBarBgColor ?? Color(0xff9775FA),
+            backgroundColor: Colors.white,
+            onTap: (index) {
+              setState(() {
+                selectedIndex = index;
+                _page = index;
+                pageController.jumpToPage(index);
+              });
+            },
           ),
         ),
       ),

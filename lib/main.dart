@@ -11,6 +11,7 @@ import 'package:laza/my_cards_screen.dart';
 import 'package:laza/splash_screen.dart';
 import 'package:laza/theme.dart';
 import 'package:laza/wishlist_screen.dart';
+import 'package:laza/Cart.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -18,7 +19,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -38,13 +39,13 @@ class MyApp extends StatelessWidget {
             darkTheme: AppTheme.darkTheme,
             home: AuthGate(),
             routes: {
-              '/authgate': (context) => AuthGate(),
-              '/dashboard': (context) => Dashboard(),
+              '/authgate': (context) => const AuthGate(),
+              '/dashboard': (context) => const Dashboard(),
               '/contactus': (context) => Contactus(),
-              '/home': (context) => HomeScreen(),
-              '/wishlist': (context) => WishlistScreen(),
-              '/cart': (context) => CartScreen(),
-              '/my_cards': (context) => MyCardsScreen(),
+              '/home': (context) => const HomeScreen(),
+              '/wishlist': (context) => const WishlistScreen(),
+              '/cart': (context) => const CartScreen(),
+              '/my_cards': (context) => const MyCardsScreen(),
               '/aboutus': (context) => aboutus(),
             },
           );

@@ -167,12 +167,12 @@ void logout() {
                   horizontalTitleGap: 10.0,
                 ),
                 ListTile(
-                  leading: const Icon(Icons.people_outline),
+                  leading: const Icon(Icons.settings),
                   onTap: () {
-Navigator.pushNamed(context, '/aboutus');
+
                   },
                   contentPadding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  title: const Text('About Us'),
+                  title: const Text('Settings'),
                   horizontalTitleGap: 10.0,
                 ),
               ],
