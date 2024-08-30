@@ -16,8 +16,8 @@ class WishlistScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     const products = [
       Product(
-          title: 'Nike Sportswear Club Fleece',
-          thumbnailPath: 'assets/images/img2.png',
+          title: 'Dell XPS 13 9340',
+          thumbnailPath: 'assets/images/notebook-xps-13-9340-silver-compare-800x550-front.jpg',
           price: '\$99',
           description:
               'The Nike Throwback Pullover Hoodie is made from premium French terry fabric that blends a performance feel with',
@@ -27,18 +27,19 @@ class WishlistScreen extends StatelessWidget {
             'assets/images/product-img3.png',
             'assets/images/product-img4.png',
           ]),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
+      Product(title: ' Dell XPS 14 9440', thumbnailPath: 'assets/images/notebook-xps-14-9440-gray-compare-800x550-front.jpg', price: '\$99'),
+      Product(title: ' Dell XPS 16 9640', thumbnailPath: 'assets/images/notebook-xps-16-9640-nt-silver-compare-800x550-front.jpg', price: '\$99'),
+   
+      // Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
+      // Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
+      // Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
+      // Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
+      // Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
+      // Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
+      // Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
+      // Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
+      // Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/img3.png', price: '\$99'),
+      // Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/img2.png', price: '\$99'),
     ];
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -76,7 +77,7 @@ class WishlistScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('65 Items', style: context.bodyLargeW500),
+                      Text('3 Items', style: context.bodyLargeW500),
                       const SizedBox(height: 5.0),
                       Row(
                         children: [

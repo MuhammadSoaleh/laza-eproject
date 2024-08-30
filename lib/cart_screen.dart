@@ -50,12 +50,12 @@ class CartScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Men's Tie-Dye T-Shirt Nike Sportswear",
+                              "Dell XPS 13 9340",
                               style: context.bodySmallW500,
                             ),
                             const SizedBox(height: 10.0),
                             Text(
-                              "\$45 (-\$4.00 Tax)",
+                              "\$450 (-\$4.00 Tax)",
                               style: context.bodyExtraSmall?.copyWith(color: ColorConstant.manatee),
                             ),
                           ],
@@ -157,12 +157,12 @@ class CartScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Men's Tie-Dye T-Shirt Nike Sportswear",
+                              "Dell XPS 13 9340",
                               style: context.bodySmallW500,
                             ),
                             const SizedBox(height: 10.0),
                             Text(
-                              "\$45 (-\$4.00 Tax)",
+                              "\$450 (-\$4.00 Tax)",
                               style: context.bodyExtraSmall?.copyWith(color: ColorConstant.manatee),
                             ),
                           ],

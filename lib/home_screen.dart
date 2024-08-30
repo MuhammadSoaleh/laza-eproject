@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
 
     const products = [
       Product(
-        title: 'Nike Sportswear Club Fleece',
+        title: ' Dell XPS 13 9340',
         thumbnailPath: 'assets/images/notebook-xps-13-9340-silver-compare-800x550-front.jpg',
         price: '\$99',
         description:
@@ -40,9 +40,9 @@ class HomeScreen extends StatelessWidget {
           'assets/images/notebook-xps-13-9340-silver-compare-800x550-front.jpg',
         ],
       ),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/notebook-xps-13-9340-silver-compare-800x550-front.jpg', price: '\$99'),
-      Product(title: 'Training Top Nike Sport Clash', thumbnailPath: 'assets/images/notebook-xps-14-9440-gray-compare-800x550-front.jpg', price: '\$99'),
-      Product(title: 'Trail Running Jacket Nike Windrunner', thumbnailPath: 'assets/images/notebook-xps-16-9640-nt-silver-compare-800x550-front.jpg', price: '\$99'),
+      Product(title: ' Dell XPS 13 9340', thumbnailPath: 'assets/images/notebook-xps-13-9340-silver-compare-800x550-front.jpg', price: '\$99'),
+      Product(title: ' Dell XPS 14 9440', thumbnailPath: 'assets/images/notebook-xps-14-9440-gray-compare-800x550-front.jpg', price: '\$99'),
+      Product(title: ' Dell XPS 16 9640', thumbnailPath: 'assets/images/notebook-xps-16-9640-nt-silver-compare-800x550-front.jpg', price: '\$99'),
     ];
 
     const inputBorder = OutlineInputBorder(
